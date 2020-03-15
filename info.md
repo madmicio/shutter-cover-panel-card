@@ -22,7 +22,6 @@
     cards:
       - type: 'custom:shutter-cover-panel-card'
         title: Tapparelle
-        icon: 'mdi:window-shutter'
         innershadow: noenable
         iconemboss: noenable
         entities:
