@@ -60,6 +60,11 @@
             icon: 'mdi:weather-sunset-down'
             cardtype: button
 ```
+**NOTE: if you do not need the buttons in the right column of the card you must still enter the following code**
+ ```yaml
+        sidebuttons:
+          - entity: null
+```
 ## hack install
 
 1. install `shutter-cover-panel-card.js` plugin
@@ -68,7 +73,7 @@
 
   ```yaml
   resources:
-    - url: /community_plugin/shutter-cover-panel-card/shutter-cover-panel-card.js
+    - url: /community_plugin/shutter-cover-panel-card/shutter-cover-panel-card.js?v=1
       type: module
 ```
 
@@ -82,7 +87,7 @@
 
   ```yaml
   resources:
-    - url: /local/shutter-cover-panel-card.js
+    - url: /local/shutter-cover-panel-card.js?v=1
       type: module
   ```
 
@@ -98,7 +103,10 @@
 | `background` |  | tranpsarent | your color | define the background card color |
 | `coverWidth` |  | 100px |  | define the cover width |
 | `coverheight` |  | 300px |  | define the cover height |
-| `ccountTextt` |  | aperte |  | text after numer of open covers |
+| `title` |  | string |  | card title  |
+| `countText` |  | aperte |  | text after numer of open covers |
+| `borderradius` |  | 15px |  | cover border-radius value |
+| `buttonborderradius` |  | 15px |  | buttons border-radius value |
 
 ### entity Options
 | Name | Type | Default | Supported options | Description |
