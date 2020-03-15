@@ -88,9 +88,7 @@
 | Name | Type | Default | Supported options | Description |
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `entities` | string | **required** | `cover.salone` | entity_id |
-| `name` | string | optional | `Salone` | Define the name of the cover 
-or automatically it takes the friendly name |
-in button mode the icon becomes a button to activate / deactivate the entity |
+| `name` | string | optional | `Salone` | Define the name of the cover or automatically it takes the friendly name |
 
 ### side buttons Options
 | Name | Type | Default | Supported options | Description |
