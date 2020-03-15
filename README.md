@@ -16,11 +16,8 @@
 - type: 'custom:shutter-cover-panel-card'
   title: Tapparelle
   icon: 'mdi:window-shutter'
-  showbackButton: no_show
   # covercolor: red
   buttonText: Tapparelle
-  backbuttonText: casa
-  buttonPath: /lovelace/0
   # background: transparent
   innershadow: noenable
   softui: noenable
@@ -91,8 +88,10 @@
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type` | string | **Required** | `custom:shutter-cover-panel-card` | Type of the card |
 | `entities` | string | **Required** | entity | list of entitity |
-| `innershadow` | object list | optional | enable/disable | enable - disable innershadow in the card |
-| `iconemboss` | object | optional | enable/disable | enable - disable icon emboss effect |
+| `innershadow` |  | optional | enable/disable | enable - disable innershadow in the card |
+| `iconemboss` |  | optional | enable/disable | enable - disable icon emboss effect |
+| `covercolor` |  | optional | your color | define the cover color |
+| `coverbackground` |  | optional | your color | define the backgroung cover color and up-stop-downbuttos background color |
 
 ### entity Options
 | Name | Type | Default | Supported options | Description |
