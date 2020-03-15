@@ -60,6 +60,11 @@
             icon: 'mdi:weather-sunset-down'
             cardtype: button
 ```
+**NOTE: if you do not need the buttons in the right column of the card you must still enter the following code**
+ ```yaml
+        sidebuttons:
+          - entity: null
+```
 ## hack install
 
 1. install `shutter-cover-panel-card.js` plugin
