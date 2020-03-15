@@ -98,7 +98,10 @@
 | `background` |  | tranpsarent | your color | define the background card color |
 | `coverWidth` |  | 100px |  | define the cover width |
 | `coverheight` |  | 300px |  | define the cover height |
-| `ccountTextt` |  | aperte |  | text after numer of open covers |
+| `title` |  | string |  | card title  |
+| `countText` |  | aperte |  | text after numer of open covers |
+| `borderradius` |  | 15px |  | cover border-radius value |
+| `buttonborderradius` |  | 15px |  | buttons border-radius value |
 
 ### entity Options
 | Name | Type | Default | Supported options | Description |
