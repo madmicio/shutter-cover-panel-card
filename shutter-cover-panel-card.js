@@ -28,6 +28,8 @@ class ShutterCoverPanelcard extends LitElement {
     var sidebackground = this.config.sidebackground ? this.config.sidebackground : "#f6f5fa";
     var covercolor = this.config.covercolor ? this.config.covercolor : "#0080ff";
     var coverbackground = this.config.coverbackground ? this.config.coverbackground : "#f2f0fa";
+    var borderradius = this.config.borderradius ? this.config.borderradius : "15px";
+    var buttonborderradius = this.config.buttonborderradius ? this.config.buttonborderradius : "15px";
     
     
     return html`
@@ -44,21 +46,21 @@ class ShutterCoverPanelcard extends LitElement {
                       <div class="cover-slider">
                         <h2>${ent.name || stateObj.attributes.friendly_name}</h2>
                             <h4 class="cover">${stateObj.state === "closed" ? 0 : Math.round(stateObj.attributes.current_position)}</h4>
-                            <div class="range-holder" style="--slider-height: ${coverHeight}; --covercolor: ${covercolor}; --coverbackground: ${coverbackground};">
+                            <div class="range-holder" style="--slider-height: ${coverHeight}; --covercolor: ${covercolor}; --coverbackground: ${coverbackground}; --borderradius: ${borderradius}; --coverbackground: ${coverbackground};">
                               <input type="range" class="${stateObj.state}" style="--slider-width: ${coverWidth};--slider-height: ${coverHeight};" .value="${stateObj.state === "close" ? 0 : Math.round((stateObj.attributes.current_position -100) * -1)}" @change=${e => this._setCoverPosition(stateObj, (e.target.value -100) * -1)}>
                             </div>
                       </div>
                       <div class="push">
                       </div>
-                      <div class="push" style="--coverbackground: ${coverbackground};">
+                      <div class="push" style="--coverbackground: ${coverbackground}; --buttonborderradius: ${buttonborderradius};">
                         <input type="checkbox" id='up${entityCounter}' class='push-btn' @click=${e => this._up(stateObj)} />
                         <label for='up${entityCounter}'>↑</label>
                       </div>
-                      <div class="push" style="--coverbackground: ${coverbackground};">
+                      <div class="push" style="--coverbackground: ${coverbackground}; --buttonborderradius: ${buttonborderradius};">
                         <input type="checkbox" id='stop${entityCounter}' class='push-btn' @click=${e => this._stop(stateObj)} />
                         <label for='stop${entityCounter}'>◼︎</label>
                       </div>
-                      <div class="push" style="--coverbackground: ${coverbackground};">
+                      <div class="push" style="--coverbackground: ${coverbackground}; --buttonborderradius: ${buttonborderradius};">
                         <input type="checkbox" id='down${entityCounter}' class='push-btn' @click=${e => this._down(stateObj)} />
                         <label for='down${entityCounter}'>↓</label>
                       </div>
@@ -83,7 +85,7 @@ class ShutterCoverPanelcard extends LitElement {
                               <div class="grid-container">
                               ${ent.cardtype == "button" ? html`
                                     <div class="${iconemboss? 'iconside icon_shadow click' : 'iconside click'}" 
-                                                  style="${sideBnt.state =="on" ? 'background-color: var(--active-background-button-color);' : 'background-color: var(--deactive-background-button-color); border: solid 1px var(--button-border-standard);'}" @click=${e => this._switch(sideBnt)}>
+                                                  style="${sideBnt.state =="on" ? 'background-color: var(--active-background-button-color); --buttonborderradius: ${buttonborderradius};' : 'background-color: var(--deactive-background-button-color); border: solid 1px var(--button-border-standard);'} --buttonborderradius: ${buttonborderradius};" @click=${e => this._switch(sideBnt)}>
                                         <ha-icon icon="${ent.icon  || sideBnt.attributes.icon}" 
                                                   style="color:${sideBnt.state =="on" ? 'var(--state-icon-secondary-color);' : 'var(state-icon-color);'}"/>
                                       </div>
@@ -93,7 +95,7 @@ class ShutterCoverPanelcard extends LitElement {
                               ` : html`
                               `}
                               ${ent.cardtype == "script" ? html`
-                                    <div class="${iconemboss? 'iconside icon_shadow click' : 'iconside click'}" style="background-color: var(--deactive-background-button-color); border: solid 1px var(--button-border-standard);" @click=${e => this._switch(sideBnt)}>
+                                    <div class="${iconemboss? 'iconside icon_shadow click' : 'iconside click'}" style="background-color: var(--deactive-background-button-color); border: solid 1px var(--button-border-standard); --buttonborderradius: ${buttonborderradius};" @click=${e => this._switch(sideBnt)}>
                                         <ha-icon icon="${ent.icon  || sideBnt.attributes.icon}" style="color: var(--state-icon-primary-color);"/>
                                       </div>
                                       <div class="left_row text ">${ent.name || sideBnt.attributes.friendly_name}</div>  
@@ -245,7 +247,7 @@ class ShutterCoverPanelcard extends LitElement {
     .iconside {
       position: relative;
 
-      border-radius:15px;
+      border-radius: var(--buttonborderradius);
       display: block;
       padding-top:17px;
       grid-area: menu;
@@ -459,7 +461,7 @@ class ShutterCoverPanelcard extends LitElement {
         .range-holder input[type="range"] {
           outline: 0;
           border: solid 2px var(--coverbackground);
-          border-radius: var(--ha-card-border-radius);
+          border-radius: var(--borderradius);
           width: var(--slider-height);
           margin: 0;
           transition: box-shadow 0.2s ease-in-out;
@@ -494,7 +496,7 @@ class ShutterCoverPanelcard extends LitElement {
           cursor: ns-resize;
           background: var(--covercolor);
           box-shadow: -350px 0 0 350px var(--covercolor), inset 0 0 0 80px #e3edf7;
-          border-radius: 25px;
+         // border-radius: 25px;
           transition: box-shadow 0.2s ease-in-out;
           position: relative;
           top: calc((var(--slider-width) - 80px) / 2);
@@ -524,7 +526,7 @@ class ShutterCoverPanelcard extends LitElement {
           text-align:center;
           line-height:50px;
           cursor: pointer;
-          border-radius: 15px;
+          border-radius: var(--buttonborderradius);
           color: #b2abcf;
           display:block;
           font-size:22px;
