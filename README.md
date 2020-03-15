@@ -6,6 +6,9 @@
   button-border-standard: rgba(0, 128, 255, .5)
   state-icon-active-color: "#0080ff"
 ```
+# Shutter Cover Panel Card
+![all](example.jpg)
+
 
 # locelace config example
 
