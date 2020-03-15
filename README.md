@@ -12,50 +12,54 @@
 
 # locelace config example
 
-```yaml
-- type: 'custom:shutter-cover-panel-card'
-  title: Tapparelle
-  icon: 'mdi:window-shutter'
-  # covercolor: red
-  buttonText: Tapparelle
-  # background: transparent
-  innershadow: noenable
-  iconemboss: noenable
-  entities:
-    - entity: cover.salone
-      name: Salone
-    - entity: cover.veneziana
-    - entity: cover.porta_cucina
-      name: Porta Cucina
-    - entity: cover.cucina
-      name: Cucina
-    - entity: cover.sofia
-      name: Sofia
-    - entity: cover.camera_matrimoniale
-      name: Matrimoniale
-    - entity: cover.emma
-      name: Emma
-  sidebuttons:
-    - entity: script.apri_tutto
-      name: Apri Tutto
-      label: tapparelle
-      icon: 'mdi:window-shutter-open'
-      cardtype: script
-    - entity: script.chiudi_tutto
-      name: Chiudi Tutto
-      label: tapparelle
-      icon: 'mdi:window-shutter'
-      cardtype: script
-    - entity: automation.chiusura_tapparella_alba
-      name: chiusura invernale
-      label: automazione
-      icon: 'mdi:weather-sunset-up'
-      cardtype: button
-    - entity: automation.chiusura_tapparelle_invernale
-      name: chiusura invernale
-      label: automazione
-      icon: 'mdi:weather-sunset-down'
-      cardtype: button
+**panel: true** REQUIRED
+ ```yaml
+  - title: ''
+    panel: true
+    path: shutter
+    icon: 'mdi:window-shutter'
+    badges: []
+    cards:
+      - type: 'custom:shutter-cover-panel-card'
+        title: Tapparelle
+        icon: 'mdi:window-shutter'
+        innershadow: noenable
+        iconemboss: noenable
+        entities:
+          - entity: cover.salone
+            name: Salone
+          - entity: cover.veneziana
+          - entity: cover.porta_cucina
+            name: Porta Cucina
+          - entity: cover.cucina
+            name: Cucina
+          - entity: cover.sofia
+            name: Sofia
+          - entity: cover.camera_matrimoniale
+            name: Matrimoniale
+          - entity: cover.emma
+            name: Emma
+        sidebuttons:
+          - entity: script.apri_tutto
+            name: Apri Tutto
+            label: tapparelle
+            icon: 'mdi:window-shutter-open'
+            cardtype: script
+          - entity: script.chiudi_tutto
+            name: Chiudi Tutto
+            label: tapparelle
+            icon: 'mdi:window-shutter'
+            cardtype: script
+          - entity: automation.chiusura_tapparella_alba
+            name: chiusura invernale
+            label: automazione
+            icon: 'mdi:weather-sunset-up'
+            cardtype: button
+          - entity: automation.chiusura_tapparelle_invernale
+            name: chiusura invernale
+            label: automazione
+            icon: 'mdi:weather-sunset-down'
+            cardtype: button
 ```
 ## hack install
 
@@ -82,7 +86,7 @@
     - url: /local/shutter-cover-panel-card.js
       type: module
   ```
-**panel: true** REQUIRED
+
 ### Main Options
 | Name | Type | Default | Supported options | Description |
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
