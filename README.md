@@ -73,7 +73,7 @@
 
   ```yaml
   resources:
-    - url: /community_plugin/shutter-cover-panel-card/shutter-cover-panel-card.js
+    - url: /community_plugin/shutter-cover-panel-card/shutter-cover-panel-card.js?v=1
       type: module
 ```
 
@@ -87,7 +87,7 @@
 
   ```yaml
   resources:
-    - url: /local/shutter-cover-panel-card.js
+    - url: /local/shutter-cover-panel-card.js?v=1
       type: module
   ```
 
