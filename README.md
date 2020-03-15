@@ -7,58 +7,75 @@
   state-icon-active-color: "#0080ff"
 ```
 # Shutter Cover Panel Card
-![all](example.jpg)
+![all](example.JPG)
 
 
 # locelace config example
 
 ```yaml
-- type: 'custom:soft-ui-general-card'
-  background: transparent
-  innershadow: enable
-  iconemboss: enable
+- type: 'custom:shutter-cover-panel-card'
+  title: Tapparelle
+  icon: 'mdi:window-shutter'
+  showbackButton: no_show
+  # covercolor: red
+  buttonText: Tapparelle
+  backbuttonText: casa
+  buttonPath: /lovelace/0
+  # background: transparent
+  innershadow: noenable
+  softui: noenable
   entities:
-    - entity: sensor.salone_temperatura
-      name: Soggiorno
-      icon: 'mdi:thermometer'
-      min: -10
-      max: 50
-      innershadow: enable
-      cardtype: sensor
-    - entity: sensor.salone_umidita
-      name: Esterno
-      icon: 'mdi:water-percent'
-      min: 0
-      max: 100
-      cardtype: sensor
-    - entity: light.luce_bagno_piccolo
-      name: luce del pc
-      icon: 'mdi:lightbulb-outline'
+    - entity: cover.salone
+      name: Salone
+    - entity: cover.veneziana
+    - entity: cover.porta_cucina
+      name: Porta Cucina
+    - entity: cover.cucina
+      name: Cucina
+    - entity: cover.sofia
+      name: Sofia
+    - entity: cover.camera_matrimoniale
+      name: Matrimoniale
+    - entity: cover.emma
+      name: Emma
+  buttons:
+    - entity: automation.chiusura_tapparella_alba
+      name: chiususa alba
+      icon: 'mdi:sunrise'
       cardtype: button
-      label: led
-        
-        
+    - entity: automation.chiusura_tapparelle_invernale
+      name: chiusura invernale
+      icon: 'mdi:sunset'
+      cardtype: button
+  script:
+    - entity: script.apri_tutto
+      name: apri
+      icon: 'mdi:open'
+    - entity: script.chiudi_tutto
+      name: chiudi
+      icon: 'mdi:close'
+  prova:
+    - entity: script.apri_tutto
+      name: Apri Tutto
+      label: tapparelle
+      icon: 'mdi:window-shutter-open'
+      cardtype: script
+    - entity: script.chiudi_tutto
+      name: Chiudi Tutto
+      label: tapparelle
+      icon: 'mdi:window-shutter'
+      cardtype: script
+    - entity: automation.chiusura_tapparella_alba
+      name: chiusura invernale
+      label: automazione
+      icon: 'mdi:weather-sunset-up'
+      cardtype: button
+    - entity: automation.chiusura_tapparelle_invernale
+      name: chiusura invernale
+      label: automazione
+      icon: 'mdi:weather-sunset-down'
+      cardtype: button
 ```
-config for sensor element with custom sensor value
-
-```yaml
-- entity: script.spegni_luci
-  name: Spegni Tutto
-  icon: 'mdi:lightbulb-outline'
-  cardtype: sensor-script
-  label: luci
-  display_value: sensor.number_of_lights_on
-```                            
-                            
-                            
-                            
-![all](examples/soft_ui_style.png)
-soft_ui style
-
-
-![all](examples/flat_style.png)
-flat style
-
 
 
 ## Install
