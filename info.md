@@ -93,6 +93,9 @@
 | `covercolor` |  | "#0080ff" | your color | define the cover color |
 | `coverbackground` |  | "#f2f0fa" | your color | define the background cover color and up-stop-downbuttos background color |
 | `background` |  | tranpsarent | your color | define the background card color |
+| `coverWidth` |  | 100px |  | define the cover width |
+| `coverheight` |  | 300px |  | define the cover height |
+| `ccountTextt` |  | aperte |  | text after numer of open covers |
 
 ### entity Options
 | Name | Type | Default | Supported options | Description |
