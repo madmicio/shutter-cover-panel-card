@@ -88,10 +88,11 @@
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type` | string | **Required** | `custom:shutter-cover-panel-card` | Type of the card |
 | `entities` | string | **Required** | entity | list of entitity |
-| `innershadow` |  | optional | enable/disable | enable - disable innershadow in the card |
-| `iconemboss` |  | optional | enable/disable | enable - disable icon emboss effect |
-| `covercolor` |  | optional | your color | define the cover color |
-| `coverbackground` |  | optional | your color | define the backgroung cover color and up-stop-downbuttos background color |
+| `innershadow` |  | enable | enable/disable | enable - disable innershadow in the card |
+| `iconemboss` |  | enable | enable/disable | enable - disable icon emboss effect |
+| `covercolor` |  | "#0080ff" | your color | define the cover color |
+| `coverbackground` |  | "#f2f0fa" | your color | define the background cover color and up-stop-downbuttos background color |
+| `background` |  | tranpsarent | your color | define the background card color |
 
 ### entity Options
 | Name | Type | Default | Supported options | Description |
