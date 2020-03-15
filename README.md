@@ -98,6 +98,4 @@ in button mode the icon becomes a button to activate / deactivate the entity |
 | `entity` | string | **require** | `script.apri_tutto`  | entity_id |
 | `name` | string | optional | `Apri Tutto` | Define the name of the button |
 | `icon` | string | optional | `mdi:icon` | Icon to display. Will be overriden by the icon defined in a state |
-| `type` | string | **Required** | script / button | define the card style and function. in script mode 
-it doesn't change appearance, just click effect , 
-in button mode the icon becomes a button to activate / deactivate the entity ||
+| `type` | string | **Required** | script / button | define the card style and function. in script mode it doesn't change appearance, just click effect , in button mode the icon becomes a button to activate / deactivate the entity ||
