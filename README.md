@@ -98,7 +98,7 @@
 | Name | Type | Default | Supported options | Description |
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `entities` | string | **required** | `cover.salone` | entity_id |
-| `name` | string | optional | `Salone` | Define the name of the cover or automatically it takes the friendly name |
+| `name` | string | optional | string | Define the name of the cover or automatically it takes the friendly name |
 
 ### side buttons Options
 | Name | Type | Default | Supported options | Description |
