@@ -20,7 +20,7 @@
   buttonText: Tapparelle
   # background: transparent
   innershadow: noenable
-  softui: noenable
+  iconemboss: noenable
   entities:
     - entity: cover.salone
       name: Salone
