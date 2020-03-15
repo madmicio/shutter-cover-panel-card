@@ -16,11 +16,8 @@
 - type: 'custom:shutter-cover-panel-card'
   title: Tapparelle
   icon: 'mdi:window-shutter'
-  showbackButton: no_show
   # covercolor: red
   buttonText: Tapparelle
-  backbuttonText: casa
-  buttonPath: /lovelace/0
   # background: transparent
   innershadow: noenable
   softui: noenable
@@ -91,19 +88,22 @@
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type` | string | **Required** | `custom:shutter-cover-panel-card` | Type of the card |
 | `entities` | string | **Required** | entity | list of entitity |
-| `innershadow` | object list | optional | enable/disable | enable - disable innershadow in the card |
-| `iconemboss` | object | optional | enable/disable | enable - disable icon emboss effect |
+| `innershadow` |  | enable | enable/disable | enable - disable innershadow in the card |
+| `iconemboss` |  | enable | enable/disable | enable - disable icon emboss effect |
+| `covercolor` |  | "#0080ff" | your color | define the cover color |
+| `coverbackground` |  | "#f2f0fa" | your color | define the background cover color and up-stop-downbuttos background color |
+| `background` |  | tranpsarent | your color | define the background card color |
 
 ### entity Options
 | Name | Type | Default | Supported options | Description |
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `entities` | string | **required** | `cover.salone` | entity_id |
-| `name` | string | optional | `Salone` | Define the name of the cover or automatically it takes the friendly name |
+| `entities` | string | **required** | entity | entity_id |
+| `name` | string | optional | string | Define the name of the cover or automatically it takes the friendly name |
 
 ### side buttons Options
 | Name | Type | Default | Supported options | Description |
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `entity` | string | **require** | `script.apri_tutto`  | entity_id |
-| `name` | string | optional | `Apri Tutto` | Define the name of the button |
+| `entity` | string | **require** | entity  | entity_id |
+| `name` | string | optional | string | Define the name of the button |
 | `icon` | string | optional | `mdi:icon` | Icon to display. Will be overriden by the icon defined in a state |
 | `type` | string | **Required** | script / button | define the card style and function. in script mode it doesn't change appearance, just click effect , in button mode the icon becomes a button to activate / deactivate the entity ||
