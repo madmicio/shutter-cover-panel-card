@@ -103,7 +103,7 @@ class ShutterCoverPanelcard extends LitElement {
                               `}
                               
                 `: html``;
-              })}
+              })} 
         </div>
     `;
   }
@@ -160,9 +160,7 @@ class ShutterCoverPanelcard extends LitElement {
     if (!config.title) {
       throw new Error("You need to define a title");
     }
-    if (!config.icon) {
-      throw new Error("You need to define a icon");
-    }
+
     this.config = config;
   }
 
