@@ -73,7 +73,7 @@
 
 ### Manual install
 
-1. Download and copy `shutter-cover-panel-card.js` from (https://github.com/madmicio/shutter-cover-panel-cardi) into your `config/www`  directory.
+1. Download and copy `shutter-cover-panel-card.js` from (https://github.com/madmicio/shutter-cover-panel-card) into your `config/www`  directory.
 
 2. Add a reference to `shutter-cover-panel-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
 
