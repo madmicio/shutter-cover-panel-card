@@ -65,7 +65,7 @@
         sidebuttons:
           - entity: null
 ```
-## hack install
+## hacs install
 
 1. install `shutter-cover-panel-card.js` plugin
 
