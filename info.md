@@ -72,9 +72,9 @@
 2. Add a reference to `shutter-cover-panel-card.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
 
   ```yaml
-  resources:
-    - url: /community_plugin/shutter-cover-panel-card/shutter-cover-panel-card.js?v=1
-      type: module
+resources:
+  - type: module
+    url: /hacsfiles/shutter-cover-panel-card/shutter-cover-panel-card.js
 ```
 
 ## Install
