@@ -107,6 +107,7 @@
 | `countText` |  | aperte |  | text after numer of open covers |
 | `borderradius` |  | 15px |  | cover border-radius value |
 | `buttonborderradius` |  | 15px |  | buttons border-radius value |
+| `coverdistance` |  | 150px |  | set distance between covers |
 
 ### entity Options
 | Name | Type | Default | Supported options | Description |
