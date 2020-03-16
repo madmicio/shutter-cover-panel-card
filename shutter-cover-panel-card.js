@@ -30,6 +30,7 @@ class ShutterCoverPanelcard extends LitElement {
     var coverbackground = this.config.coverbackground ? this.config.coverbackground : "#f2f0fa";
     var borderradius = this.config.borderradius ? this.config.borderradius : "15px";
     var buttonborderradius = this.config.buttonborderradius ? this.config.buttonborderradius : "15px";
+    var coverdistance = this.config.coverdistance ? this.config.coverdistance : "150px";
     
     
     return html`
@@ -42,7 +43,7 @@ class ShutterCoverPanelcard extends LitElement {
                 entityCounter++;
                 const stateObj = this.hass.states[ent.entity];
                 return stateObj ? html`
-                    <div class="cover">
+                    <div class="cover" style="--coverdistance: ${coverdistance};">
                       <div class="cover-slider">
                         <h2>${ent.name || stateObj.attributes.friendly_name}</h2>
                             <h4 class="cover">${stateObj.state === "closed" ? 0 : Math.round(stateObj.attributes.current_position)}</h4>
@@ -409,7 +410,7 @@ class ShutterCoverPanelcard extends LitElement {
             margin:auto;
         }
         .page > .main > .inner-main > .cover {
-          width:150px;
+          width: var(--coverdistance);
           display:inline-block;
         }
         
