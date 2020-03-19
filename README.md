@@ -108,6 +108,7 @@ resources:
 | `borderradius` |  | 15px |  | cover border-radius value |
 | `buttonborderradius` |  | 15px |  | buttons border-radius value |
 | `coverdistance` |  | 150px |  | set distance between cover |
+| `sidebackground` |  | "#f6f5fa" |  | set sidebar background |
 
 ### entity Options
 | Name | Type | Default | Supported options | Description |
