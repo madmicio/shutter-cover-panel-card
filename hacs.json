@@ -1,6 +1,6 @@
 {
-"name": "shutter cover panel card",
+"name": "lights panel card",
 "content_in_root": true,
-"filename": "shutter-cover-panel-card.js",
+"filename": "lights-panel-card.js",
 "render_readme" : true
 }
