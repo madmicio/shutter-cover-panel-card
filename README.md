@@ -1,12 +1,8 @@
-# NOTE: need in "your-theme.yaml"
-```yaml
-#button
-  active-background-button-color: '#0080ff'
-  deactive-background-button-color: "#f2f0fa"
-  button-border-standard: rgba(0, 128, 255, .5)
-  state-icon-active-color: "#0080ff"
-```
 # Shutter Cover Panel Card
+
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
+[![buymeacoffee_badge](https://img.shields.io/badge/Donate-buymeacoffe-ff813f?style=flat)](https://www.buymeacoffee.com/madmicio)
+
 ![all](example.JPG)
 
 
@@ -65,6 +61,16 @@
         sidebuttons:
           - entity: null
 ```
+
+# NOTE: need in "your-theme.yaml"
+```yaml
+#button
+  active-background-button-color: '#0080ff'
+  deactive-background-button-color: "#f2f0fa"
+  button-border-standard: rgba(0, 128, 255, .5)
+  state-icon-active-color: "#0080ff"
+```
+
 ## hacs install
 
 1. install `shutter-cover-panel-card.js` plugin
@@ -123,3 +129,6 @@ resources:
 | `name` | string | optional | string | Define the name of the button |
 | `icon` | string | optional | `mdi:icon` | Icon to display. Will be overriden by the icon defined in a state |
 | `type` | string | **Required** | script / button | define the card style and function. in script mode it doesn't change appearance, just click effect , in button mode the icon becomes a button to activate / deactivate the entity ||
+
+<a href="https://www.buymeacoffee.com/madmicio" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+
